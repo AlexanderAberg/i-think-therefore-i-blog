@@ -28,7 +28,7 @@ TEMPLATES_DIR = os.path.join(BASE_DIR, 'templates')
 SECRET_KEY = os.environ.get('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ['8000-alexanderab-ithinkthere-0g6k19qj5up.ws.codeinstitute-ide.net', '.herokuapp.com']
 
@@ -98,8 +98,11 @@ WSGI_APPLICATION = 'codestar.wsgi.application'
 #     }
 # }
 
+# DATABASES = {
+#     'default': dj_database_url.parse(os.environ.get('DATABASE_URL'))
+# }
 DATABASES = {
-    'default': dj_database_url.parse(os.environ.get('DATABASE_URL'))
+    'default': dj_database_url.parse(os.environ.get("DATABASE_URL"))
 }
 
 CSRF_TRUSTED_ORIGINS = [
